@@ -20,4 +20,4 @@ Sound effects for button clicks, win/loss events, and countdowns
 
 🌐 Deployed the game as a WebGL build playable in browser
 
-🔗 Play The Game
+https://niharikaa0124.github.io/The-Great-Heist/
