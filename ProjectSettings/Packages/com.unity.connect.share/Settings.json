@@ -19,7 +19,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"C:/Users/aggni/OneDrive/Desktop/theif game/My project - Copy/WebGL Builds;C:/Users/aggni/OneDrive/Desktop/WebGLBuild;;;;;;;;\"}"
+                "value": "{\"m_Value\":\"C:/Users/aggni/OneDrive/Desktop/theif game/My project - Copy/TheGreatHeist;C:/Users/aggni/OneDrive/Desktop/theif game/My project - Copy/docs;C:/Users/aggni/OneDrive/Desktop/theif game/My project - Copy/WebGL Builds;C:/Users/aggni/OneDrive/Desktop/WebGLBuild;;;;;;\"}"
             }
         ]
     }

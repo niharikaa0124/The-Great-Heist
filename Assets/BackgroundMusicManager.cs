@@ -11,6 +11,16 @@ public class BackgroundMusicManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            // Apply mute preference
+            bool isMuted = PlayerPrefs.GetInt("Muted", 0) == 1;
+            backgroundMusic.volume = isMuted ? 0f : 1f;
+
+            // Play only if not muted
+            if (!isMuted && !backgroundMusic.isPlaying)
+            {
+                backgroundMusic.Play();
+            }
         }
         else
         {
@@ -20,13 +30,11 @@ public class BackgroundMusicManager : MonoBehaviour
 
     public void PlayMusic()
     {
-        if (backgroundMusic != null)
+        if (backgroundMusic != null && !backgroundMusic.isPlaying)
         {
-            backgroundMusic.Stop();  // 🔁 Always restart fresh
             backgroundMusic.Play();
         }
     }
-
 
     public void StopMusic()
     {
@@ -42,5 +50,18 @@ public class BackgroundMusicManager : MonoBehaviour
         {
             backgroundMusic.Pause();
         }
+    }
+
+    public void SetVolume(bool isMuted)
+    {
+        backgroundMusic.volume = isMuted ? 0f : 1f;
+
+        if (isMuted)
+            backgroundMusic.Pause();
+        else
+            backgroundMusic.Play();
+
+        PlayerPrefs.SetInt("Muted", isMuted ? 1 : 0);
+        PlayerPrefs.Save();
     }
 }
